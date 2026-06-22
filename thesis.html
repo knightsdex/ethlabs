@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thesis — Ethlabs</title>
+    <meta
+      name="description"
+      content="Ethlabs — a non-profit R&amp;D lab for Ethereum and ETH. Our thesis on the next era of the onchain economy."
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1"
+    />
+    <link rel="canonical" href="https://ethlabs.org/thesis.html" />
+    <meta property="og:site_name" content="Ethlabs" />
+    <meta property="og:url" content="https://ethlabs.org/thesis.html" />
+    <meta property="og:image" content="https://ethlabs.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://ethlabs.org/og.png" />
+    <link rel="apple-touch-icon" href="/icon-180.png" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Thesis — Ethlabs" />
+    <meta
+      property="og:description"
+      content="Our thesis on the next era of the onchain economy."
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%20104'%3E%3Cpath%20fill='%23141414'%20d='M32%200L63%2051L32%2069L1%2051Z'%20opacity='.9'/%3E%3Cpath%20fill='%23141414'%20d='M1%2057L32%2075L63%2057L32%20104Z'%20opacity='.55'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --muted: #8f8f8c;
+        --grotesk: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --mono: "Outfit", ui-monospace, SFMono-Regular, Menlo, Consolas,
+          monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--mono);
+        font-size: 0.94rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      ::selection {
+        background: var(--ink);
+        color: var(--bg);
+      }
+
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 3.6rem 5.4% 1.3rem;
+        font-size: 0.82em;
+        line-height: 1.6;
+      }
+      .bar-right {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .bar a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .bar a:hover {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .bar-right a,
+      .bar-right .current {
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .bar > a {
+        color: var(--ink);
+        text-transform: none;
+        letter-spacing: -0.01em;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      .bar .current {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .article {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: clamp(1.25rem, 4vh, 2.25rem) 1.6rem clamp(3rem, 9vh, 6rem);
+      }
+
+      h1 {
+        font-family: var(--grotesk);
+        font-weight: 700;
+        font-size: clamp(2.1rem, 5vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+        margin: 0 0 1em;
+      }
+      p {
+        margin: 0 0 1.5em;
+      }
+
+      ol,
+      ul {
+        margin: 1.7em 0;
+        padding-left: 2.7ch;
+      }
+      ol li,
+      ul li {
+        margin: 0 0 1.1em;
+        padding-left: 0.4ch;
+      }
+      ol li:last-child,
+      ul li:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        font-weight: 700;
+      }
+      .lead {
+        margin-bottom: 0.3em;
+      }
+      ul {
+        margin-top: 0;
+      }
+      ul li {
+        padding-left: 0.2ch;
+      }
+      li::marker {
+        color: var(--muted);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+      p a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      /* mobile: compact header (small wordmark + horizontal menu), like desktop */
+      @media (max-aspect-ratio: 4/5), (max-width: 700px) {
+        .bar {
+          padding: 1.5rem 1.5rem 1.15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <a href="index.html">Ethlabs</a>
+      <div class="bar-right">
+        <span class="current">Thesis</span>
+        <a href="funding.html">Funding</a>
+      </div>
+    </header>
+
+    <article class="article">
+      <h1>Thesis</h1>
+      <p>Ethlabs is a non-profit R&amp;D lab for Ethereum and ETH.</p>
+
+      <p>
+        Our mission is to make Ethereum the settlement layer of the global
+        economy.
+      </p>
+
+      <p>
+        The internet became global because shared protocols created a common
+        language between networks. Private systems remained useful, but bounded.
+        Finance is approaching a similar moment. As value, assets, and markets
+        become digital, the world needs shared settlement infrastructure.
+      </p>
+
+      <p>
+        Ethereum is uniquely positioned to become that shared base layer, the
+        neutral foundation on which users, institutions, and agents can transact
+        without intermediation.
+      </p>
+
+      <p class="lead">What we believe:</p>
+
+      <ul>
+        <li>
+          <strong>We believe credible neutrality matters.</strong> Ten years of
+          uptime and the lowest counterparty risk. Ground that cannot be pulled
+          away by any one country, institution, company, or person.
+        </li>
+        <li>
+          <strong>We believe ETH matters.</strong> The most valuable,
+          programmable store of value. A decade of broad distribution, deep
+          liquidity in onchain markets, and maximally trustless asset on
+          Ethereum.
+        </li>
+        <li>
+          <strong>We believe DeFi matters.</strong> Markets, liquidity, credit,
+          exchange, and coordination, open to anyone.
+        </li>
+        <li>
+          <strong>We believe adoption matters.</strong> Principles do not change
+          the world until people benefit from them.
+        </li>
+      </ul>
+
+      <p>
+        We sit between two worlds: real usage from the builders at the frontier,
+        and the protocol that has to support it. We work with users,
+        applications, wallets, L2s, infrastructure teams, institutions, ETH
+        holders, core devs and researchers, then turn what they actually need
+        into protocol work, shared standards, infrastructure, and shipped
+        products.
+      </p>
+
+      <p>
+        Ethlabs is independent but Ethereum is a shared project. We are one node
+        in a much larger network of stewards. This is the multi-node future.
+      </p>
+
+      <p>
+        We have spent the better part of the past decade contributing to
+        Ethereum core research and development.
+      </p>
+
+      <p>
+        We are opinionated and transparent. We move with urgency, learn in
+        public, and course-correct when we&rsquo;re wrong.
+      </p>
+
+      <p>
+        We are building a lean, talent-dense team for people who want to do the
+        most important work of their careers:
+        <!-- <a href="mailto:join@ethlabs.org">join@ethlabs.org</a> -->
+      </p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Funding &mdash; Ethlabs</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1"
+    />
+    <link rel="canonical" href="https://ethlabs.org/funding.html" />
+    <meta property="og:site_name" content="Ethlabs" />
+    <meta property="og:url" content="https://ethlabs.org/funding.html" />
+    <meta property="og:image" content="https://ethlabs.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://ethlabs.org/og.png" />
+    <link rel="apple-touch-icon" href="/icon-180.png" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%20104'%3E%3Cpath%20fill='%23141414'%20d='M32%200L63%2051L32%2069L1%2051Z'%20opacity='.9'/%3E%3Cpath%20fill='%23141414'%20d='M1%2057L32%2075L63%2057L32%20104Z'%20opacity='.55'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --muted: #8f8f8c;
+        --line: #e6e6e2;
+        --grotesk: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --mono: "Outfit", ui-monospace, SFMono-Regular, Menlo, Consolas,
+          monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--mono);
+        font-size: 0.94rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        transition: background 0.25s ease, color 0.25s ease;
+      }
+      ::selection {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 3.6rem 5.4% 1.3rem;
+        font-size: 0.82em;
+        line-height: 1.6;
+      }
+      .bar-right {
+        display: flex;
+        align-items: center;
+        gap: 1.15rem;
+      }
+      .bar a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .bar a:hover {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .bar .current {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .bar-right a,
+      .bar-right .current {
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .bar > a {
+        color: var(--ink);
+        text-transform: none;
+        letter-spacing: -0.01em;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .page {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: clamp(1.25rem, 4vh, 2.25rem) 1.6rem clamp(3rem, 9vh, 6rem);
+      }
+      h1 {
+        font-family: var(--grotesk);
+        font-weight: 700;
+        font-size: clamp(2.1rem, 5vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+        margin: 0 0 1em;
+      }
+      .intro {
+        color: var(--muted);
+        margin: 0;
+        max-width: 44ch;
+      }
+      .intro p {
+        margin: 0 0 1em;
+      }
+      .intro p:last-child {
+        margin-bottom: 0;
+      }
+      .label {
+        font-family: var(--mono);
+        font-weight: 700;
+        font-size: 0.72rem;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 0 0 1.1em;
+      }
+      .divider {
+        border: 0;
+        border-top: 1px solid var(--line);
+        margin: 2.6em 0;
+      }
+      .anchors {
+        font-family: var(--grotesk);
+        font-weight: 700;
+        font-size: clamp(1.18rem, 3vw, 1.9rem);
+        line-height: 1.38;
+        letter-spacing: -0.012em;
+        max-width: 46rem;
+      }
+      .anchors .a {
+        white-space: nowrap;
+      }
+      .anchors .dot {
+        color: var(--muted);
+        font-weight: 400;
+        margin: 0 0.42em;
+      }
+      .contributors {
+        font-family: var(--grotesk);
+        font-weight: 700;
+        font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+        line-height: 1.45;
+        letter-spacing: -0.012em;
+        max-width: 46rem;
+      }
+      .contributors .a {
+        white-space: nowrap;
+      }
+      .contributors .dot {
+        color: var(--muted);
+        font-weight: 400;
+        margin: 0 0.42em;
+      }
+      .round {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        column-width: 18rem;
+        column-gap: 2.6rem;
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+      .round li {
+        break-inside: avoid;
+        margin: 0 0 0.55em;
+        white-space: nowrap;
+      }
+      .round .org {
+        color: var(--muted);
+      }
+
+      /* hero split */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+      }
+      .hero .intro {
+        font-size: 0.94rem;
+        color: var(--ink);
+        line-height: 1.7;
+        max-width: 40ch;
+      }
+      @media (min-width: 48rem) {
+        .hero {
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 3rem;
+        }
+        .hero .intro {
+          flex: 1 1 auto;
+          padding-top: 1.3rem;
+        }
+        .hero .contribute {
+          flex: 0 0 19rem;
+        }
+      }
+
+      /* contribution box — minimal, monochrome */
+      .contribute {
+        border: 1px solid var(--line);
+        background: var(--bg);
+        padding: 1.4rem 1.4rem 1.5rem;
+      }
+      .contribute .label {
+        margin: 0 0 1em;
+      }
+      .ens {
+        display: block;
+        font-family: var(--mono);
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 0 0 0.5rem;
+        word-break: break-all;
+      }
+      .send-label {
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.03em;
+        margin: 0 0 0.2rem;
+      }
+      .addr-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 0 0 1.1em;
+      }
+      .addr {
+        font-family: var(--mono);
+        color: inherit;
+        text-decoration: none;
+      }
+      .addr:hover {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .copy {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+        background: transparent;
+        border: 1px solid var(--line);
+        padding: 0.45em 0.7em;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .copy:hover {
+        background: var(--ink);
+        color: var(--bg);
+        border-color: var(--ink);
+      }
+      .cta {
+        display: block;
+        width: 100%;
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--bg);
+        background: var(--ink);
+        border: 1px solid var(--ink);
+        padding: 0.95em;
+        cursor: pointer;
+      }
+      .cta:hover {
+        opacity: 0.88;
+      }
+      .note {
+        font-size: 0.76rem;
+        color: var(--muted);
+        line-height: 1.55;
+        margin: 1em 0 0;
+      }
+
+      /* modal */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 20, 20, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        z-index: 50;
+      }
+      .modal-overlay.open {
+        display: flex;
+      }
+      .modal {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        width: 100%;
+        max-width: 25rem;
+        padding: 1.5rem 1.5rem 1.7rem;
+      }
+      .modal-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 0 0 0.5rem;
+      }
+      .modal-head h2 {
+        font-family: var(--grotesk);
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+      .modal-close {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+        background: transparent;
+        border: 1px solid var(--line);
+        padding: 0.5em 0.8em;
+        cursor: pointer;
+      }
+      .modal-close:hover {
+        background: var(--ink);
+        color: var(--bg);
+        border-color: var(--ink);
+      }
+      .modal-sub {
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.5;
+        margin: 0 0 1.4rem;
+      }
+      .modal-qr {
+        width: 210px;
+        height: 210px;
+        margin: 0 auto 1.3rem;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .modal-qr img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .modal-addr-label {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 0 0 0.4rem;
+      }
+      .modal-addr {
+        text-align: center;
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        word-break: break-all;
+        margin: 0 0 1.3rem;
+      }
+      .modal-addr a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .modal-addr a:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .modal-copy {
+        display: block;
+        width: 100%;
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--bg);
+        background: var(--ink);
+        border: none;
+        padding: 0.9em;
+        cursor: pointer;
+      }
+      .modal-copy:hover {
+        opacity: 0.88;
+      }
+
+      /* mobile: compact header (small wordmark + horizontal menu), like desktop */
+      @media (max-aspect-ratio: 4/5), (max-width: 700px) {
+        .bar {
+          padding: 1.5rem 1.5rem 1.15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <a href="index.html">Ethlabs</a>
+      <div class="bar-right">
+        <a href="thesis.html">Thesis</a><span class="current">Funding</span>
+      </div>
+    </header>
+    <main class="page">
+      <h1>Funding</h1>
+      <div class="hero">
+        <div class="intro">
+          <p>Ethlabs is an independent non-profit R&amp;D lab.</p>
+          <p>
+            We are supported by mission-aligned partners across the ecosystem,
+            with neutrality and independence built directly into our foundation.
+          </p>
+        </div>
+        <div class="contribute">
+          <p class="label">Contribute</p>
+          <p class="send-label">Send to</p>
+          <span class="ens">eth-labs.eth</span>
+          <div class="addr-row">
+            <a
+              class="addr"
+              href="https://etherscan.io/address/0xComingSoon"
+              target="_blank"
+              rel="noopener"
+              >0x000</a
+            ><button class="copy js-copy" type="button">Copy</button>
+          </div>
+          <!-- 0xEa98&hellip;7d79 &#8599; -->
+          <button class="cta" id="contributeBtn" type="button">
+            Contribute
+          </button>
+          <p class="note">
+            Accepts ETH, stablecoins, or any other ERC-20 on Ethereum mainnet.
+          </p>
+        </div>
+      </div>
+      <hr class="divider" />
+      <p class="label">Anchor Funders</p>
+      <div class="anchors">
+        <span class="a">Bitmine</span><span class="dot">&middot;</span
+        ><wbr /><span class="a">Sharplink</span><span class="dot">&middot;</span
+        ><wbr /><span class="a">Joe Lubin</span>
+      </div>
+      <hr class="divider" />
+      <p class="label">Contributors</p>
+      <div class="contributors">
+        <span class="a">SNZ</span><span class="dot">&middot;</span><wbr /><span
+          class="a"
+          >Octant</span
+        ><span class="dot">&middot;</span><wbr /><span class="a"
+          >Anchorage Digital</span
+        ><span class="dot">&middot;</span><wbr /><span class="a"
+          >Konstantin Lomashuk</span
+        >
+      </div>
+      <hr class="divider" />
+      <p class="label">Community</p>
+      <ul class="round">
+        <li>A.J. Warner<span class="org"> &mdash; Offchain</span></li>
+        <li>Alex Gluchowski<span class="org"> &mdash; ZKsync</span></li>
+        <li>
+          Alex Stokes<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Anthony Sassano<span class="org"> &mdash; Independent</span></li>
+        <li>Avi Atkin<span class="org"> &mdash; Polygon</span></li>
+        <li>Avichal Garg<span class="org"> &mdash; Electric Capital</span></li>
+        <li>
+          Barnabas Busa<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Bartek Kiepuszewski<span class="org"> &mdash; L2BEAT</span></li>
+        <li>Bread<span class="org"> &mdash; MegaETH</span></li>
+        <li>
+          Curtis Spencer<span class="org"> &mdash; Electric Capital</span>
+        </li>
+        <li>Danny Ryan<span class="org"> &mdash; Etherealize</span></li>
+        <li>David Hoffman<span class="org"> &mdash; Bankless</span></li>
+        <li>DC Posch<span class="org"> &mdash; Daimo</span></li>
+        <li>DCBuilder<span class="org"> &mdash; World</span></li>
+        <li>Declan Fox<span class="org"> &mdash; Linea</span></li>
+        <li>Dmarz<span class="org"> &mdash; Flashbots</span></li>
+        <li>
+          Drew van der Werff<span class="org"> &mdash; Commit-Boost</span>
+        </li>
+        <li>
+          Fahad Saleh<span class="org"> &mdash; University of Florida</span>
+        </li>
+        <li>Federico Carrone<span class="org"> &mdash; Lambda Class</span></li>
+        <li>Gabe Shapiro<span class="org"> &mdash; MetaLex</span></li>
+        <li>Grant Hummer<span class="org"> &mdash; Etherealize</span></li>
+        <li>Greg Markou<span class="org"> &mdash; Sprinter</span></li>
+        <li>Hart Lambur<span class="org"> &mdash; Across</span></li>
+        <li>Haseeb Qureshi<span class="org"> &mdash; Dragonfly</span></li>
+        <li>Hayden Adams<span class="org"> &mdash; Uniswap</span></li>
+        <li>
+          Jerome de Tychey<span class="org"> &mdash; Ethereum France</span>
+        </li>
+        <li>Jesse Pollak<span class="org"> &mdash; Base</span></li>
+        <li>Jihoz<span class="org"> &mdash; Ronin</span></li>
+        <li>Joe Andrews<span class="org"> &mdash; Aztec Labs</span></li>
+        <li>
+          Justin Drake<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Karn Saroya<span class="org"> &mdash; Re</span></li>
+        <li>
+          Kevaundray Wedderburn<span class="org">
+            &mdash; Ethereum Foundation</span
+          >
+        </li>
+        <li>Kofi<span class="org"> &mdash; Base</span></li>
+        <li>Kydo<span class="org"> &mdash; Eigen Labs</span></li>
+        <li>Luca Cosivi<span class="org"> &mdash; OpenZeppelin</span></li>
+        <li>Marek Moraczyński<span class="org"> &mdash; Nethermind</span></li>
+        <li>Marek Olszewski<span class="org"> &mdash; Celo</span></li>
+        <li>
+          Marius van der Wijden<span class="org">
+            &mdash; Ethereum Foundation</span
+          >
+        </li>
+        <li>Mark Tyneway<span class="org"> &mdash; Optimism</span></li>
+        <li>Matias Nisenson<span class="org"> &mdash; Wonderland</span></li>
+        <li>Matt Liston<span class="org"> &mdash; Independent</span></li>
+        <li>Matthias Seidl<span class="org"> &mdash; growthepie</span></li>
+        <li>mteam<span class="org"> &mdash; Spire</span></li>
+        <li>Nixo<span class="org"> &mdash; Independent</span></li>
+        <li>
+          Omid Malekan<span class="org"> &mdash; Columbia University</span>
+        </li>
+        <li>
+          Parithosh Jayanti<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Potuz<span class="org"> &mdash; Offchain</span></li>
+        <li>punk5736<span class="org"> &mdash; Independent</span></li>
+        <li>Quintus Kilbourn<span class="org"> &mdash; Flashbots</span></li>
+        <li>Ryan Berckmans<span class="org"> &mdash; Independent</span></li>
+        <li>Sreeram Kannan<span class="org"> &mdash; Eigen Labs</span></li>
+        <li>Steven Goldfeder<span class="org"> &mdash; Offchain</span></li>
+        <li>Terence Tsao<span class="org"> &mdash; Offchain</span></li>
+        <li>
+          Thomas Thiery<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Tim Beiko<span class="org"> &mdash; Independent</span></li>
+        <li>Tina Zhen<span class="org"> &mdash; Flashbots</span></li>
+        <li>Tom Schmidt<span class="org"> &mdash; Dragonfly</span></li>
+        <li>
+          Toni Wahrstätter<span class="org"> &mdash; Ethereum Foundation</span>
+        </li>
+        <li>Trent Van Epps<span class="org"> &mdash; Protocol Guild</span></li>
+        <li>Validator.eth<span class="org"> &mdash; ENS</span></li>
+        <li>Viktor Bunin<span class="org"> &mdash; Coinbase</span></li>
+        <li>Vivek Raman<span class="org"> &mdash; Etherealize</span></li>
+      </ul>
+    </main>
+    <div class="modal-overlay" id="contributeModal" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Contribute"
+      >
+        <div class="modal-head">
+          <h2>Contribute</h2>
+          <button class="modal-close" id="modalClose" type="button">
+            Close
+          </button>
+        </div>
+        <p class="modal-sub">
+          Accepts ETH, stablecoins, or any other ERC-20 on Ethereum mainnet.
+        </p>
+        <div class="modal-qr">
+          <img
+            src="data:image/png;base64,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"
+            alt="Contribution address QR code"
+          />
+        </div>
+        <p class="modal-addr-label">Contribution address</p>
+        <p class="modal-addr">
+          <a
+            href="https://etherscan.io/address/0xComingSoon"
+            target="_blank"
+            rel="noopener"
+            >0xComingSoon&nbsp;&#8599;</a
+          >
+        </p>
+        <button class="modal-copy js-copy" type="button">Copy address</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var ADDR = "0xComingSoon";
+        function fb() {
+          var ta = document.createElement("textarea");
+          ta.value = ADDR;
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand("copy");
+          } catch (e) {}
+          document.body.removeChild(ta);
+        }
+        document.querySelectorAll(".js-copy").forEach(function (b) {
+          b.addEventListener("click", function () {
+            var o = b.textContent;
+            var done = function () {
+              b.textContent = "Copied \u2713";
+              setTimeout(function () {
+                b.textContent = o;
+              }, 1500);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard
+                .writeText(ADDR)
+                .then(done)
+                .catch(function () {
+                  fb();
+                  done();
+                });
+            } else {
+              fb();
+              done();
+            }
+          });
+        });
+        var m = document.getElementById("contributeModal"),
+          ob = document.getElementById("contributeBtn"),
+          cb = document.getElementById("modalClose");
+        function op() {
+          m.classList.add("open");
+          m.setAttribute("aria-hidden", "false");
+        }
+        function cl() {
+          m.classList.remove("open");
+          m.setAttribute("aria-hidden", "true");
+        }
+        if (ob) ob.addEventListener("click", op);
+        if (cb) cb.addEventListener("click", cl);
+        if (m)
+          m.addEventListener("click", function (e) {
+            if (e.target === m) cl();
+          });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") cl();
+        });
+      })();
+    </script>
+  </body>
+</html>

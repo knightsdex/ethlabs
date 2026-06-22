@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ethlabs</title>
+    <meta
+      name="description"
+      content="Non-profit R&amp;D lab for Ethereum and ETH"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1"
+    />
+    <link rel="canonical" href="https://ethlabs.org/" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ethlabs" />
+    <meta property="og:title" content="Ethlabs" />
+    <meta
+      property="og:description"
+      content="Non-profit R&amp;D lab for Ethereum and ETH"
+    />
+    <meta property="og:url" content="https://ethlabs.org/" />
+    <meta property="og:image" content="https://ethlabs.org/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ethlabs" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ethlabs" />
+    <meta
+      name="twitter:description"
+      content="Non-profit R&amp;D lab for Ethereum and ETH"
+    />
+    <meta name="twitter:image" content="https://ethlabs.org/og.png" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%20104'%3E%3Cpath%20fill='%23111111'%20d='M32%200L63%2051L32%2069L1%2051Z'%20opacity='.9'/%3E%3Cpath%20fill='%23111111'%20d='M1%2057L32%2075L63%2057L32%20104Z'%20opacity='.55'/%3E%3C/svg%3E"
+    />
+    <link rel="apple-touch-icon" href="/icon-180.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ethlabs",
+        "alternateName": "Eth Labs",
+        "url": "https://ethlabs.org/",
+        "description": "Non-profit R&D lab for Ethereum and ETH.",
+        "logo": "https://ethlabs.org/og.png",
+        "image": "https://ethlabs.org/og.png",
+        "email": "join@ethlabs.org",
+        "foundingDate": "2025",
+        "member": [
+          {
+            "@type": "Person",
+            "name": "Ansgar Dietrichs",
+            "sameAs": "https://x.com/adietrichs"
+          },
+          {
+            "@type": "Person",
+            "name": "Barnabé Monnot",
+            "sameAs": "https://x.com/barnabemonnot"
+          },
+          {
+            "@type": "Person",
+            "name": "Caspar Schwarz-Schilling",
+            "sameAs": "https://x.com/casparschwa"
+          },
+          {
+            "@type": "Person",
+            "name": "Josh Rudolf",
+            "sameAs": "https://x.com/rudolf6_"
+          },
+          {
+            "@type": "Person",
+            "name": "Julian Ma",
+            "sameAs": "https://x.com/_julianma"
+          }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: #fff;
+        font-family: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      .stage {
+        position: fixed;
+        inset: 0;
+      }
+      .stage svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .desktop {
+        display: block;
+      }
+      .phone {
+        display: none;
+        left: 50%;
+        right: auto;
+        width: 100%;
+        max-width: 460px;
+        transform: translateX(-50%);
+      }
+      @media (max-aspect-ratio: 4/5), (max-width: 700px) {
+        .desktop {
+          display: none;
+        }
+        .phone {
+          display: block;
+        }
+        .bar {
+          display: none;
+        }
+      }
+      svg text {
+        fill: #111;
+        font-weight: 300;
+      }
+      svg .wm {
+        font-weight: 600;
+      }
+      svg a {
+        cursor: pointer;
+      }
+      svg a text {
+        text-decoration: none;
+      }
+      svg a.em text {
+        fill: #e5392b;
+      }
+      svg a:hover text {
+        text-decoration: underline;
+      }
+      ::selection {
+        background: #111;
+        color: #fff;
+      }
+      svg text::selection {
+        fill: #fff;
+      }
+      svg a:hover text {
+        text-decoration: underline;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      /* fixed top menu — same as thesis/funding pages so THESIS/FUNDING matches exactly */
+      .bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 3.6rem 5.4% 1.3rem;
+        line-height: 1.6;
+        font-family: "Outfit", system-ui, sans-serif;
+      }
+      .bar > a {
+        color: #111;
+        letter-spacing: -0.01em;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        visibility: hidden;
+      }
+      .bar-right {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .bar-right a {
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        font-weight: 300;
+        text-decoration: none;
+        pointer-events: auto;
+      }
+      .bar-right a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      @media (max-aspect-ratio: 4/5), (max-width: 700px) {
+        .bar {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- crawlable / accessible text (visual layout is the SVG below) -->
+    <div class="sr-only">
+      <h1>Ethlabs</h1>
+      <p>Ethlabs is a non-profit R&amp;D lab for Ethereum and ETH.</p>
+      <nav aria-label="Primary">
+        <a href="thesis.html">Thesis</a> <a href="funding.html">Funding</a>
+      </nav>
+      <h2>Team</h2>
+      <ul>
+        <li><a href="https://x.com/adietrichs">Ansgar Dietrichs</a></li>
+        <li><a href="https://x.com/barnabemonnot">Barnabé Monnot</a></li>
+        <li>
+          <a href="https://x.com/casparschwa">Caspar Schwarz-Schilling</a>
+        </li>
+        <li><a href="https://x.com/rudolf6_">Josh Rudolf</a></li>
+        <li><a href="https://x.com/_julianma">Julian Ma</a></li>
+      </ul>
+      <!-- <p>Join us: <a href="mailto:join@ethlabs.org">join@ethlabs.org</a></p> -->
+    </div>
+
+    <!-- ============ DESKTOP / LANDSCAPE ============ -->
+    <div class="stage desktop">
+      <svg
+        viewBox="0 0 1366 768"
+        preserveAspectRatio="xMidYMid meet"
+        role="img"
+        aria-label="Ethlabs — non-profit R&amp;D lab for Ethereum and ETH"
+      >
+        <g fill="none" stroke="#111" stroke-width="0.7" stroke-miterlimit="10">
+          <polyline points="95.74 208.41 1254.97 208.41 1254.97 96" />
+          <circle cx="283.71" cy="483" r="117.35" />
+          <path
+            d="M342.11,208.42s133.77,134.47,333.24,132c196.51-2.43,303.97-169.95,303.97-169.95,0,0-94.33-.33-141.15,0,.55,1.26.04,0,0,0,41.82,94.67,199.82,459.67,237.82,547.02,1.16-2.7-.12-.27,0,0,23.01-55.35,125.01-289.35,130.46-302.3"
+          />
+        </g>
+        <svg
+          x="95"
+          y="96"
+          width="373"
+          height="74.1"
+          viewBox="63 49 780 155"
+          preserveAspectRatio="xMinYMin meet"
+          fill="#111"
+          aria-hidden="true"
+        >
+          <g>
+            <polygon
+              points="87.82 179.87 87.82 138.21 147.23 138.21 147.23 114.19 87.82 114.19 87.82 73.7 156.07 73.7 155.99 49.68 63 49.68 63 203.89 157.76 203.89 157.7 179.87 87.82 179.87"
+            />
+            <path
+              d="M301.23,92.2l-.38-42.28h-24.2l.53,153.5h24.2l-.14-68.52c0-6.7,1.49-13.34,4.52-19.32.25-.5.46-.88.61-1.11,9.65-14.87,31.93-17.64,43.28-3.11.08.1.18.24.3.41,3.85,5.66,5.62,14.23,5.76,19.25.49,18.14-.1,72.4-.1,72.4h24.2s.74-62.44.1-84.23c-1.17-39.84-55.76-44.93-78.66-27Z"
+            />
+            <path
+              d="M220.4,175.75c-4.62-5.93-4.27-12.21-4.27-18.21v-50.84h24.2l-.22-24.2h-23.98v-32.58h-22.19v32.58h-14.13s-.03,23.92-.03,23.92l14.16.29v62.15c0,7.92,2.1,16.25,7.98,23.36,9.7,11.74,30.14,12.59,44.5,10.03l8.02-19.19c-9.21.12-27.9.58-34.04-7.31Z"
+            />
+            <path
+              d="M632.79,99.47v-49.55h-24.2l1.78,153.72h20.51s-.07-7.1-.15-11.74c-.04-2.31-.09-4.66-.09-4.66.62.19,2.67,2.57,5.87,5.12,26.13,20.85,69.77,13.01,84.14-15.36,29.8-58.86-39.66-121.31-87.85-77.53ZM673.09,180.05c-42.5,1.13-52.99-60.76-12.61-69.25,51.71-10.87,61.24,67.96,12.61,69.25Z"
+            />
+            <path
+              d="M561.26,90.22c-2.21,2.27-3.33,6.06-3.11,12.25-41.65-45.14-114.07-.85-93.81,64.57,12.93,41.75,69.8,45.86,93.81,20.13l-.51,16.35,22.72.12v-116.3c-8.67-.5-15.41-.91-19.09,2.88ZM520.63,181.69c-42.77,1.19-45.73-67.19-9.41-74.72,53.84-11.17,59.62,73.32,9.41,74.72Z"
+            />
+            <path
+              d="M842.07,160.12c-4.79-28.37-42.62-22.97-60.56-32.2-14.64-7.53-5.67-20.18,7.55-21.76,16.99-2.03,23.83,4.89,37.96,9.85,14.41-13.69,3.83-24.2-2.58-26.99-28.07-12.2-74.62-5.95-73.9,31.97.72,37.96,50.62,26.98,64.91,39.52,4.1,3.6,3.83,12.36.41,15.79-12.07,12.12-43.21-2.82-54.7-11.42l-15.42,16.87c26.11,29.78,105.38,31.99,96.33-21.65Z"
+            />
+            <rect x="410.92" y="49.92" width="24.2" height="153.5" />
+          </g>
+        </svg>
+        <text x="95" y="200" font-size="14" letter-spacing="1.5">
+          NON-PROFIT R&amp;D LAB FOR ETHEREUM AND ETH
+        </text>
+        <a href="thesis.html">
+          <text
+            text-anchor="end"
+            x="1188"
+            y="50"
+            font-size="16"
+            letter-spacing="1.6"
+          >
+            THESIS
+          </text>
+        </a>
+        <a href="funding.html">
+          <text
+            text-anchor="middle"
+            x="1254.97"
+            y="50"
+            font-size="16"
+            letter-spacing="1.6"
+          >
+            FUNDING
+          </text>
+        </a>
+        <g font-size="14" letter-spacing="1.4">
+          <a href="https://x.com/adietrichs" target="_blank" rel="noopener">
+            <text x="904" y="290">ANSGAR DIETRICHS</text>
+          </a>
+          <a href="https://x.com/barnabemonnot" target="_blank" rel="noopener">
+            <text x="914" y="312">BARNAB&#201; MONNOT</text>
+          </a>
+          <a href="https://x.com/casparschwa" target="_blank" rel="noopener">
+            <text x="924" y="334">CASPAR SCHWARZ-SCHILLING</text>
+          </a>
+          <a href="https://x.com/rudolf6_" target="_blank" rel="noopener">
+            <text x="933" y="356">JOSH RUDOLF</text>
+          </a>
+          <a href="https://x.com/_julianma" target="_blank" rel="noopener">
+            <text x="943" y="378">JULIAN MA</text>
+          </a>
+          <!-- <a class="em" href="mailto:join@ethlabs.org">
+            <text x="952" y="400">JOIN@ETHLABS.ORG</text>
+          </a> -->
+        </g>
+        <a href="funding.html">
+          <text
+            x="283.71"
+            y="488"
+            text-anchor="middle"
+            font-size="14"
+            letter-spacing="1"
+          >
+            CONTRIBUTORS
+          </text>
+        </a>
+      </svg>
+    </div>
+
+    <!-- ============ PHONE / PORTRAIT ============ -->
+    <div class="stage phone">
+      <svg
+        viewBox="0 0 660 1300"
+        preserveAspectRatio="xMidYMin meet"
+        role="img"
+        aria-label="Ethlabs — non-profit R&amp;D lab for Ethereum and ETH"
+      >
+        <g
+          fill="none"
+          stroke="#111"
+          stroke-width="1.1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M44 262 H620" />
+          <path d="M130 262 L560 1150" />
+          <circle cx="330" cy="990" r="130" />
+        </g>
+        <text class="wm" x="42" y="150" font-size="92">Ethlabs</text>
+        <text x="44" y="210" font-size="18" letter-spacing="1.3">
+          NON-PROFIT R&amp;D LAB
+        </text>
+        <text x="44" y="238" font-size="18" letter-spacing="1.3">
+          FOR ETHEREUM AND ETH
+        </text>
+        <a href="thesis.html">
+          <text
+            text-anchor="end"
+            x="616"
+            y="99"
+            font-size="19"
+            letter-spacing="1.6"
+          >
+            THESIS
+          </text>
+        </a>
+        <a href="funding.html">
+          <text
+            text-anchor="end"
+            x="616"
+            y="150"
+            font-size="19"
+            letter-spacing="1.6"
+          >
+            FUNDING
+          </text>
+        </a>
+        <g font-size="15" letter-spacing="1.0">
+          <a href="https://x.com/adietrichs" target="_blank" rel="noopener">
+            <text x="194" y="360">ANSGAR DIETRICHS</text>
+          </a>
+          <a href="https://x.com/barnabemonnot" target="_blank" rel="noopener">
+            <text x="215" y="404">BARNAB&#201; MONNOT</text>
+          </a>
+          <a href="https://x.com/casparschwa" target="_blank" rel="noopener">
+            <text x="236" y="448">CASPAR SCHWARZ-SCHILLING</text>
+          </a>
+          <a href="https://x.com/rudolf6_" target="_blank" rel="noopener">
+            <text x="257" y="492">JOSH RUDOLF</text>
+          </a>
+          <a href="https://x.com/_julianma" target="_blank" rel="noopener">
+            <text x="279" y="536">JULIAN MA</text>
+          </a>
+          <a class="em" href="mailto:join@ethlabs.org">
+            <!-- <text x="300" y="580">JOIN@ETHLABS.ORG</text> -->
+          </a>
+        </g>
+        <a href="funding.html">
+          <text
+            x="330"
+            y="997"
+            text-anchor="middle"
+            font-size="15"
+            letter-spacing="1"
+          >
+            CONTRIBUTORS
+          </text>
+        </a>
+      </svg>
+    </div>
+  </body>
+</html>
